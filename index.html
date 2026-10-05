@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Provador Virtual</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Provador Virtual • Enzo Milano Experience</title>
+    <meta name="description" content="Experimente roupas e calçados em um avatar de corpo inteiro com tecnologia de inteligência artificial de alta definição." />
+    <meta property="og:title" content="Provador Virtual • Enzo Milano Experience" />
+    <meta property="og:description" content="Experimente roupas e calçados em um avatar de corpo inteiro com IA." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -12,39 +23,32 @@
           extend: {
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
-              serif: ['Instrument Serif', 'serif'],
+              serif: ['Instrument Serif', 'Playfair Display', 'serif'],
+              display: ['Playfair Display', 'serif'],
             },
+            colors: {
+              brand: {
+                50: '#f8f8f7',
+                100: '#efefe9',
+                200: '#dedecf',
+                300: '#c5c4ad',
+                400: '#abaa8b',
+                500: '#8e8c6e',
+                600: '#716f56',
+                700: '#585643',
+                800: '#464537',
+                900: '#1a1916',
+                950: '#0d0d0b',
+              }
+            }
           }
         }
       }
     </script>
-    <script type="importmap">
-      {
-        "imports": {
-          "react/": "https://esm.sh/react@^19.1.0/",
-          "react": "https://esm.sh/react@^19.1.0",
-          "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-          "@google/genai": "https://esm.sh/@google/genai@^1.10.0",
-          "react-image-crop": "https://esm.sh/react-image-crop@^11.0.6",
-          "framer-motion": "https://esm.sh/framer-motion@^11.2.12",
-          "clsx": "https://esm.sh/clsx@^2.1.1",
-          "tailwind-merge": "https://esm.sh/tailwind-merge@^2.4.0",
-          "@tsparticles/react": "https://esm.sh/@tsparticles/react@^3.0.0",
-          "@tsparticles/engine": "https://esm.sh/@tsparticles/engine@^3.5.0",
-          "@tsparticles/slim": "https://esm.sh/@tsparticles/slim@^3.5.0"
-        }
-      }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://esm.sh/react-image-crop@^11.0.6/dist/ReactCrop.css" />
-    <link rel="stylesheet" href="./index.css" />
-  <link rel="stylesheet" href="/index.css">
-</head>
-  <body>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900 antialiased selection:bg-gray-900 selection:text-white">
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
